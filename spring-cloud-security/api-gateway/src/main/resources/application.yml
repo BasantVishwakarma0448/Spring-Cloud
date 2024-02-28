@@ -1,0 +1,15 @@
+server:
+  host: localhost
+  port: 8080
+spring:
+  main:
+    web-application-type: reactive
+  application:
+    name: api-gateway
+  config:
+    import: configserver:http://localhost:8888
+  jackson:
+    default-property-inclusion: non-null
+jwt:
+  secret: AvHGRK8C0ia4uOuxxqPD5DTbWC9F9TWvPStp3pb7ARo0oK2mJ3pd3YG4lxA9i8bj6OTbadweheufHNyG
+  expiration: 3600000
